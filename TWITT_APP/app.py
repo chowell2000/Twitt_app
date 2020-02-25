@@ -15,4 +15,8 @@ def create_app():
     @app.route('/')
     def root():
         return 'Welcome to Twitt Off!'
+
+    @app.route('/about')
+    def about():
+        return "about me"
     return app
