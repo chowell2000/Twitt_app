@@ -1,8 +1,10 @@
 """Code for flask app
 """
 
-from flask import Flask
+from decouple import config
+from flask import Flask, render_template, request
 from .models import DB
+
 
 
 def create_app():
@@ -14,7 +16,7 @@ def create_app():
 
     @app.route('/')
     def root():
-        return 'Welcome to Twitt Off!'
+        return render_template('base.html')
 
     @app.route('/about')
     def about():
