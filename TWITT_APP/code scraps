@@ -15,3 +15,5 @@ for tweet in tweets:
 DB.session.add(db_user)
 
 DB.session.commit()
+
+tweets2=TWITTER.Cursor(TWITTER.search,q=search_words,land="en",since=date_since))
